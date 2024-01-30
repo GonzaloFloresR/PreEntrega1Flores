@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom';
 import LogoIWasIn from '../assets/IwasIn.png';
 import CartWidget from './CartWidget';
 const NavBar = () => {
@@ -7,21 +8,25 @@ const NavBar = () => {
                 <div className="text-light bg-dark" style={{height:30}}></div>
                 <div className="row justify-content-between px-5">
                     <div className="col-md-2 my-2 ">
-                        <div><img src={LogoIWasIn} alt="Logo de I-was-In" width={166} /></div>
+                        <div>
+                            <Link to={"/"}>
+                                <img src={LogoIWasIn} alt="Logo de I-was-In" width={166} />
+                            </Link>
+                        </div>
                     </div>
                     <div className="col-md-10 d-flex justify-content-end text-uppercase fs-6">
                         <ul className="nav my-2">
                             <li className="nav-item">
-                                <a className="nav-link text-body" href="#">Inicio</a>
+                                <NavLink className="nav-link text-body" to={"/"}>Inicio</NavLink >
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Productos</a>
+                                <NavLink  className="nav-link text-dark" to={"/genero/mujer"}>Mujer</NavLink >
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Quienes Somos</a>
+                                <NavLink  className="nav-link text-dark" to={"/genero/hombre"}>Hombre</NavLink >
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Contactenos</a>
+                                <NavLink  className="nav-link text-dark" to={"/genero/niño"}>Niños</NavLink >
                             </li>
                         </ul>
                     </div>
