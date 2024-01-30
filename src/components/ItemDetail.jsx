@@ -12,10 +12,10 @@ const ItemDetail = ({item}) => {
         <div className="container">
             <div className="row">
                 <div className="col-2"></div>
-                <div className="col-md-4 bg-white py-3 rounded-start">
+                <div className="col-lg-4 bg-white py-3 rounded-start">
                     <img src={item.imagen} alt={item.alt} className="img-fluid rounded-4" />
                 </div>
-                <div className="col-md-4 bg-white py-3 rounded-end position-relative" >
+                <div className="col-lg-4 bg-white py-3 rounded-end position-relative" >
                     <BotonVolver />
                     <div className="text-start border border-1 p-3 rounded-3" style={{height:'100%'}}>
                         <h1>{item.diseno}</h1>

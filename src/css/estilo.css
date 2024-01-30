@@ -1,0 +1,11 @@
+.fondo { background: rgb(131,58,180);
+    background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 38%, rgba(38,73,208,1) 70%, rgba(244,69,252,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 38%, rgba(38,73,208,1) 70%, rgba(244,69,252,1) 100%);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 38%, rgba(38,73,208,1) 70%, rgba(244,69,252,1) 100%);
+}
+
+.efectoSobre:hover {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.6);
+-moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.6);
+box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.6);
+}
