@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import BotonVolver from "./BotonVolver";
 import ItemCount from "./ItemCount";
+import { CartContext } from "./context/CartContext";
 
 const ItemDetail = ({item}) => {
+    const {addItem} = useContext(CartContext);
+
+    const onAdd = (quantity) => {
+            addItem(item, quantity);
+    }
 
     const numeroFormateado = item?.precio?.toLocaleString('es-ES', {
         style: 'decimal',
@@ -23,7 +29,7 @@ const ItemDetail = ({item}) => {
                         <p>{item.alt}</p>
                         <p className="fw-light" style={{ fontSize: '13px' }} >VER DISPONIBILIDAD EN TIENDA <br />ENVÍOS, CAMBIOS Y DEVOLUCIONES</p>
                         <p className="fw-semibold fs-5">CLP {numeroFormateado} </p>
-                        <ItemCount stock={item.cantidad}/>
+                        <ItemCount stock={item.cantidad} onAdd={onAdd} />
                     </div>
                 </div>
                 <div className="col-2"></div>
