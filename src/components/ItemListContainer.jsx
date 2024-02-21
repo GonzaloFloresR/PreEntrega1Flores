@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import ListaProductos from '../json/productos.json'; //trabajando con Firestore
 import { useParams } from "react-router-dom";
-import ItemList from "./Itemlist";
+import ItemList from "./ItemList";
 import Loading from "./Loading";
 import {collection, getDocs, getFirestore} from 'firebase/firestore' //agregar addDoc para subir los productos 
 
