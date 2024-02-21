@@ -8,7 +8,7 @@ const CartContextProvider = ({children}) => {
 
     const addItem = (item, quantity) => {
         if (isInCart(item.id)){
-            let pos = cart.findIndex(producto => producto.id === id);
+            let pos = cart.findIndex(produc => produc.id === item.id); //por algún motivo estaba en id y tiraba error
             cart[pos].quantity += quantity;
             setCart([...cart]);
         } else {
@@ -18,7 +18,7 @@ const CartContextProvider = ({children}) => {
 
 
     const removeItem = (id) => {
-        const items = cart.filter(producto => producto.id != id);
+        const items = cart.filter(produc => produc.id != id);
         setCart([...items]);
     }
 
@@ -33,7 +33,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const cartTotalProductos = () => {
-        return cart.reduce((acumulador, producto) => acumulador += producto.quantity, 0);
+        return cart.reduce((acumulador, produc) => acumulador += produc.quantity, 0);
     }
 
     const sumatotalProductos = () => {

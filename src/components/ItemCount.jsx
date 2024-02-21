@@ -27,7 +27,7 @@ const ItemCount = ({stock, onAdd}) => {
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setItemStock(stock)
     },[stock]);
 
@@ -44,7 +44,7 @@ const ItemCount = ({stock, onAdd}) => {
             </div>
             <div className="row my-1">
                 <div className="col-md-8">
-                    {itemAdded? <Link to={"/cart"} className="btn btn-primary">Terminar mi Compra</Link> :<button type="button" className="btn btn-primary" onClick={addToCart}>Agregar al Carrito</button>}
+                    {itemAdded ? <Link to={"/cart"} className="btn btn-primary">Terminar mi Compra</Link> : <button type="button" className="btn btn-primary" onClick={addToCart}>Agregar al Carrito</button>}
                 </div>
             </div>
         </>
